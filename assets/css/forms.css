@@ -1,7 +1,9 @@
 *, body {
   font-family: 'Roboto', sans-serif;
-  font-weight: 100;
-  overflow: hidden; }
+  font-weight: 100; }
+
+.page {
+  background: rgba(27, 100, 152, 0.1); }
 
 a {
   text-decoration: none;
@@ -36,45 +38,26 @@ a:hover {
   transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%); }
 
-.pageSideNav {
-  position: fixed;
-  right: 2%; }
-  .pageSideNav li {
-    padding: 100% 0 100% 0; }
-  .pageSideNav .pageNavPoint {
-    display: block;
-    background: none;
-    width: 10px;
-    height: 10px;
-    border-radius: 8px;
-    border: 1px solid #1b6498;
-    transition: all 400ms ease-in; }
-    .pageSideNav .pageNavPoint.active {
-      background: #1b6498; }
-      .pageSideNav .pageNavPoint.active.onStartPage {
-        background: #fff; }
-    .pageSideNav .pageNavPoint.onStartPage {
-      border: 1px solid #fff; }
-
-.page {
-  height: 100%;
-  width: 100%;
-  overflow: auto; }
-
-.logo {
-  position: relative;
-  left: 10%;
-  width: 30%;
-  font-size: 1.5em;
-  font-weight: 400;
-  letter-spacing: 0.1em;
-  float: left; }
+.post {
+  max-width: 1400px; }
 
 .pageNavigation {
+  position: absolute;
   background: #1b6498;
-  height: 15vh;
+  opacity: 0.8;
+  height: 100px;
   width: 100%;
-  z-index: 100; }
+  bottom: -100px;
+  z-index: 100;
+  transition: all 500ms ease-in; }
+  .pageNavigation .logo {
+    position: relative;
+    left: 10%;
+    width: 30%;
+    font-size: 1.5em;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    float: left; }
   .pageNavigation .mainNavigation {
     width: 60%;
     float: right;
@@ -94,82 +77,91 @@ a:hover {
 
 .naviStatic {
   position: fixed;
-  opacity: 0.8;
-  top: 0;
-  transition: all 500ms ease-in; }
+  top: 0; }
 
-.naviStatic:hover {
+.pageNavigation:hover {
   opacity: 1; }
-
-.pageSubNavi {
-  margin-top: 15vh; }
 
 .pageStart {
   width: 100%;
   height: 100vh;
   background: #2996E4; }
 
-.pageContent {
-  background: rgba(27, 100, 152, 0.1); }
+.pageContent .post {
+  position: relative;
+  text-align: center;
+  margin-top: 40px; }
+  .pageContent .post:first-child {
+    margin-top: 100px; }
+
+#laptop {
+  position: relative;
+  width: 720px;
+  height: 400px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%); }
+  #laptop .top-body {
+    position: relative;
+    background-color: #000;
+    width: 570px;
+    height: 324px;
+    margin-bottom: -8px;
+    top: 0;
+    border-radius: 30px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    border: 4px #cccbc7 solid;
+    transition: transform 400ms;
+    -webkit-transition: -webkit-transform 400ms; }
+    #laptop .top-body .screen {
+      position: relative;
+      width: 92%;
+      height: 86%;
+      border-radius: 2px;
+      background: #fff;
+      text-align: center;
+      font-size: 3em; }
+      #laptop .top-body .screen img {
+        width: 80px; }
+      #laptop .top-body .screen .button {
+        cursor: pointer;
+        background: none;
+        border-radius: 4px;
+        font-size: 2rem;
+        color: #1b6498;
+        border: 1px solid #1b6498;
+        padding: 1rem 4rem;
+        transition: all 200ms ease-in; }
+        #laptop .top-body .screen .button:hover {
+          transform: scale(1.1); }
+  #laptop .bottom-body {
+    position: relative;
+    background-color: #cccbc7;
+    width: 624px;
+    height: 26px;
+    border-radius: 2px;
+    transition: transform 500ms;
+    -webkit-transition: -webkit-transform 500ms; }
+  #laptop #openslot {
+    background-color: darkgrey;
+    width: 20%;
+    border-radius: 0 0 16px 16px; }
 
 h3 {
-  font-size: 3em;
-  padding-top: 3em; }
+  font-size: 3.2em;
+  padding: 1.2em 0 .2em 0; }
 
 p {
-  width: 60%;
-  font-size: 2vw;
-  line-height: 2.6vw;
-  letter-spacing: .1vw; }
-
-hr {
-  width: 60%;
-  height: 1px;
-  border: none;
-  background: #1b6498; }
-
-.post {
-  text-align: center;
-  height: 100vh; }
-
-#skills:hover #val1 {
-  width: 95%;
-  opacity: 1; }
-#skills:hover #val2 {
-  width: 70%;
-  opacity: 1; }
-#skills:hover #val3 {
-  width: 50%;
-  opacity: 1; }
-#skills:hover #val4 {
-  width: 55%;
-  opacity: 1; }
-
-.diagram {
   position: relative;
-  width: 60%; }
-  .diagram .diagramItem {
-    padding: 1% 0 1% 0; }
-    .diagram .diagramItem ._title {
-      position: relative;
-      width: 20%;
-      float: left;
-      font-size: 2vw;
-      text-align: right;
-      right: 1%; }
-    .diagram .diagramItem ._bar {
-      position: relative;
-      height: 3vw;
-      left: 20%;
-      width: 80%;
-      background: rgba(27, 100, 152, 0.2); }
-    .diagram .diagramItem #val1, .diagram .diagramItem #val2, .diagram .diagramItem #val3, .diagram .diagramItem #val4 {
-      position: absolute;
-      width: 0;
-      opacity: 0;
-      height: 100%;
-      background: #1b6498;
-      transition: width 1800ms, opacity 1800ms; }
+  max-width: 620px;
+  font-size: 1em;
+  line-height: 1.6rem;
+  letter-spacing: .1rem;
+  text-transform: uppercase;
+  padding: 1em 0 1em 0; }
 
 .contactForm {
   -webkit-transition: all 0.30s ease-in-out;
@@ -221,47 +213,132 @@ hr {
   margin: 5px 1px 3px 0px;
   border: 1px solid #1b6498; }
 
-#laptop {
-  position: relative;
-  width: 720px;
-  height: 400px;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%); }
-  #laptop .top-body {
-    position: relative;
-    background-color: #000;
-    width: 570px;
-    height: 324px;
-    margin-bottom: -8px;
-    top: 0;
-    border-radius: 30px;
+.switch {
+  width: 600px;
+  height: 36px;
+  margin-top: 40px;
+  background: rgba(27, 100, 152, 0.2); }
+  .switch .switchItem {
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
-    border: 4px #cccbc7 solid;
-    transition: transform 400ms;
-    -webkit-transition: -webkit-transform 400ms; }
-    #laptop .top-body .screen {
+    width: 193px;
+    float: left;
+    margin-top: 5px;
+    margin-left: 5px;
+    padding: 5px 0 5px 0;
+    transition: all 400ms;
+    cursor: pointer; }
+    .switch .switchItem.selected {
+      background: #1b6498; }
+    .switch .switchItem:hover {
+      background: rgba(27, 100, 152, 0.2); }
+
+.diagram {
+  position: relative;
+  width: 60%; }
+  .diagram .diagramItem {
+    padding: 1% 0 1% 0; }
+    .diagram .diagramItem ._title {
       position: relative;
-      width: 92%;
-      height: 86%;
-      border-radius: 2px;
-      background: #fff;
-      text-align: center;
-      font-size: 3em; }
-      #laptop .top-body .screen img {
-        width: 80px; }
-  #laptop .bottom-body {
+      width: 20%;
+      float: left;
+      font-size: 2vw;
+      text-align: right;
+      right: 1%; }
+    .diagram .diagramItem ._bar {
+      position: relative;
+      height: 3vw;
+      left: 20%;
+      width: 80%;
+      background: rgba(27, 100, 152, 0.2); }
+    .diagram .diagramItem #val1, .diagram .diagramItem #val2, .diagram .diagramItem #val3, .diagram .diagramItem #val4 {
+      position: absolute;
+      width: 0;
+      opacity: 0;
+      height: 100%;
+      background: #1b6498;
+      transition: width 1800ms, opacity 1800ms; }
+  .diagram:hover #val1 {
+    width: 95%;
+    opacity: 1; }
+  .diagram:hover #val2 {
+    width: 70%;
+    opacity: 1; }
+  .diagram:hover #val3 {
+    width: 50%;
+    opacity: 1; }
+  .diagram:hover #val4 {
+    width: 55%;
+    opacity: 1; }
+
+.projectViewer {
+  position: relative;
+  height: 200px;
+  width: 100vw;
+  transition: height 400ms; }
+  .projectViewer.expand {
+    height: 60vh; }
+  .projectViewer .projectInfo {
     position: relative;
-    background-color: #cccbc7;
-    width: 624px;
-    height: 26px;
-    border-radius: 2px;
-    transition: transform 500ms;
-    -webkit-transition: -webkit-transform 500ms; }
-  #laptop #openslot {
-    background-color: darkgrey;
-    width: 20%;
-    border-radius: 0 0 16px 16px; }
+    height: 67%;
+    width: 98.4%;
+    display: none;
+    top: 1.4%;
+    background: rgba(35, 35, 35, 0.2); }
+    .projectViewer .projectInfo.showInfo {
+      display: block; }
+    .projectViewer .projectInfo .closer {
+      position: absolute;
+      bottom: 10px;
+      right: 20px;
+      font-size: 3rem;
+      color: #fff;
+      cursor: pointer; }
+  .projectViewer ul {
+    position: relative;
+    width: 100%;
+    height: 180px;
+    text-align: center;
+    overflow: hidden; }
+  .projectViewer li {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    position: relative;
+    display: inline-block;
+    width: 16%;
+    height: 100%;
+    margin: .1%; }
+    .projectViewer li .projectItem {
+      transition: all 400ms; }
+      .projectViewer li .projectItem img {
+        width: 100%;
+        height: 100%; }
+
+#me .posShift {
+  position: relative;
+  margin-top: 1rem;
+  transform: translateX(-100%);
+  transition: transform 400ms; }
+  #me .posShift.shiftIn {
+    transform: translateX(0%); }
+#me .postLeft {
+  width: 50%;
+  height: 400px;
+  float: left;
+  color: #fff;
+  background: #1b6498; }
+  #me .postLeft p {
+    text-align: right; }
+#me .postRight {
+  width: 50%;
+  text-align: left;
+  float: left; }
+  #me .postRight img {
+    height: 400px;
+    opacity: 0.5; }
+    #me .postRight img:hover {
+      opacity: 1; }
+#me .clearfix {
+  clear: both; }

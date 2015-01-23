@@ -1,0 +1,77 @@
+// LAPTOP 16:10
+
+#laptop{
+  position: relative;
+  width: 720px;
+  height: 400px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+
+  .top-body{
+    position: relative;
+    background-color: #000;
+    width:570px;
+    height: 324px;
+    margin-bottom: -8px;
+    top: 0;
+
+    border-radius: 30px;
+
+    box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    border: 4px rgb(204, 203, 199) solid;
+
+    transition: transform 400ms;
+    -webkit-transition: -webkit-transform 400ms;
+
+    .screen{
+      position: relative;
+      width: 92%;
+      height: 86%;
+      border-radius: 2px;
+      background: #fff;
+
+      text-align: center;
+      font-size: 3em;
+
+      img{
+        width: 80px;
+      }
+
+      .button{
+        cursor: pointer;
+        background: none;
+        border-radius: 4px;
+
+        font-size: 2rem;
+        color: rgb(27,100,152);
+        border: 1px solid rgb(27,100,152);
+        padding: 1rem 4rem;
+
+        transition: all 200ms ease-in;
+
+        &:hover{
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+  .bottom-body{
+    position: relative;
+    background-color: rgb(204, 203, 199);
+    width: 624px;
+    height: 26px;
+
+    border-radius: 2px;
+    transition: transform 500ms;
+    -webkit-transition: -webkit-transform 500ms;
+  }
+  #openslot{
+    background-color: darkgrey;
+    width: 20%;
+    border-radius: 0 0 16px 16px;
+  }
+}

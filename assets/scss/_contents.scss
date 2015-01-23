@@ -1,0 +1,260 @@
+h3{
+  font-size: 3.2em;
+  padding: 1.2em 0 .2em 0;
+}
+p{
+  position: relative;
+  max-width: 620px;
+  font-size: 1em;
+  line-height: 1.6rem;
+  letter-spacing: .1rem;
+  text-transform: uppercase;
+
+  padding: 1em 0 1em 0;
+}
+
+.contactForm {
+  -webkit-transition: all 0.30s ease-in-out;
+  -moz-transition: all 0.30s ease-in-out;
+  -ms-transition: all 0.30s ease-in-out;
+  -o-transition: all 0.30s ease-in-out;
+  outline: none;
+  padding: 3px 0px 3px 3px;
+  margin: 5px 1px 3px 0px;
+  color: rgb(27,100,152);
+  border: 1px solid white;
+  width: 40%;
+  max-width: 500px;
+  min-width: 100px;
+  height: 8vh;
+  font-size: 3vw;
+
+  background: rgba(27,100,152, .2);
+}
+
+.contactForm.ta{
+  height: 24vh;
+  resize: vertical;
+  font-size: 1.4vw;
+}
+
+.contactForm.button{
+  border: none;
+  color: rgb(27,100,152);
+}
+
+::-webkit-input-placeholder { /* WebKit browsers */
+  color: rgba(27,100,152, .4);
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+  color: rgba(27,100,152, .4);
+  opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+  color: rgba(27,100,152, .4);
+  opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+  color: rgba(27,100,152, .4);
+}
+
+.contactForm:focus {
+  box-shadow: none;
+  padding: 3px 0px 3px 3px;
+  margin: 5px 1px 3px 0px;
+  border: 1px solid rgba(27,100,152, 1);
+
+}
+
+.switch{
+  width: 600px;
+  height: 36px;
+  margin-top: 40px;
+
+  background: rgba(27,100,152, .2);
+  .switchItem{
+    box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    width: 193px;
+    float: left;
+    margin-top: 5px;
+    margin-left: 5px;
+    padding: 5px 0 5px 0;
+    transition: all 400ms;
+    cursor: pointer;
+
+    &.selected{
+      background: rgba(27,100,152, 1);
+    }
+
+    &:hover{
+      background: rgba(27,100,152, .2);
+    }
+  }
+}
+
+.diagram{
+
+  position: relative;
+  width: 60%;
+  .diagramItem{
+
+    padding: 1% 0 1% 0;
+
+    ._title{
+      position: relative;
+      width: 20%;
+      float: left;
+      font-size: 2vw;
+      text-align: right;
+      right: 1%;
+    }
+
+    ._bar{
+      position: relative;
+      height: 3vw;
+      left: 20%;
+      width: 80%;
+      background: rgba(27,100,152, .2);
+    }
+
+    #val1, #val2, #val3, #val4{
+      position: absolute;
+      width: 0;
+      opacity: 0;
+      height: 100%;
+      background: rgb(27,100,152);
+
+      transition: width 1800ms, opacity 1800ms;
+    }
+  }
+
+  &:hover{
+    #val1{
+      width: 95%;
+      opacity: 1;
+    }
+
+    #val2{
+      width: 70%;
+      opacity: 1;
+    }
+
+    #val3{
+      width: 50%;
+      opacity: 1;
+    }
+
+    #val4{
+      width: 55%;
+      opacity: 1;
+    }
+  }
+}
+
+.projectViewer{
+  position: relative;
+  height: 200px;
+  width: 100vw;
+
+  transition: height 400ms;
+
+  &.expand{
+    height: 60vh;
+  }
+
+  .projectInfo{
+    position: relative;
+    height: 67%;
+    width: 98.4%;
+    display: none;
+    top: 1.4%;
+    background: rgba(35,35,35,0.2);
+
+    &.showInfo{
+      display: block;
+    }
+
+    .closer{
+      position: absolute;
+      bottom: 10px;
+      right: 20px;
+      font-size: 3rem;
+      color: #fff;
+      cursor: pointer;
+    }
+  }
+
+  ul{
+    position: relative;
+    width: 100%;
+    height: 180px;
+    text-align: center;
+
+    overflow: hidden;
+  }
+
+  li{
+    box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    position: relative;
+    display: inline-block;
+    width: 16%;
+    height: 100%;
+    margin: .1%;
+
+    .projectItem{
+      transition: all 400ms;
+      & img{
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
+
+#me{
+
+  .posShift{
+    position: relative;
+    margin-top: 1rem;
+    transform: translateX(-100%);
+    transition: transform 400ms;
+
+    &.shiftIn{
+      transform: translateX(0%);
+    }
+
+  }
+
+  .postLeft{
+    width: 50%;
+    height: 400px;
+    float:left;
+    color: #fff;
+    background: rgb(27,100,152);
+
+    p{
+      text-align:right;
+    }
+  }
+  .postRight{
+    width: 50%;
+    text-align: left;
+    float:left;
+
+    img{
+      height: 400px;
+      opacity: 0.5;
+
+      &:hover{
+        opacity: 1;
+      }
+    }
+  }
+  .clearfix{
+    clear: both;
+  }
+}
