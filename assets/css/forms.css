@@ -38,9 +38,6 @@ a:hover {
   transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%); }
 
-.post {
-  max-width: 1400px; }
-
 .pageNavigation {
   position: absolute;
   background: #1b6498;
@@ -87,12 +84,17 @@ a:hover {
   height: 100vh;
   background: #2996E4; }
 
-.pageContent .post {
+.post {
   position: relative;
   text-align: center;
-  margin-top: 40px; }
-  .pageContent .post:first-child {
+  margin-top: 40px;
+  max-width: 1920px;
+  min-height: 500px;
+  overflow: hidden; }
+  .post:first-child {
     margin-top: 100px; }
+  .post:last-child {
+    padding-bottom: 60px; }
 
 #laptop {
   position: relative;
@@ -126,7 +128,7 @@ a:hover {
       font-size: 3em; }
       #laptop .top-body .screen img {
         width: 80px; }
-      #laptop .top-body .screen .button {
+      #laptop .top-body .screen .buttonStart {
         cursor: pointer;
         background: none;
         border-radius: 4px;
@@ -135,7 +137,7 @@ a:hover {
         border: 1px solid #1b6498;
         padding: 1rem 4rem;
         transition: all 200ms ease-in; }
-        #laptop .top-body .screen .button:hover {
+        #laptop .top-body .screen .buttonStart:hover {
           transform: scale(1.1); }
   #laptop .bottom-body {
     position: relative;
@@ -230,9 +232,11 @@ p {
     transition: all 400ms;
     cursor: pointer; }
     .switch .switchItem.selected {
-      background: #1b6498; }
+      background: #1b6498;
+      color: #fff; }
     .switch .switchItem:hover {
-      background: rgba(27, 100, 152, 0.2); }
+      background: rgba(27, 100, 152, 0.2);
+      color: #fff; }
 
 .diagram {
   position: relative;
@@ -241,9 +245,9 @@ p {
     padding: 1% 0 1% 0; }
     .diagram .diagramItem ._title {
       position: relative;
-      width: 20%;
+      top: .4rem;
       float: left;
-      font-size: 2vw;
+      font-size: 1.6rem;
       text-align: right;
       right: 1%; }
     .diagram .diagramItem ._bar {
@@ -299,8 +303,7 @@ p {
     position: relative;
     width: 100%;
     height: 180px;
-    text-align: center;
-    overflow: hidden; }
+    text-align: center; }
   .projectViewer li {
     box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -309,7 +312,22 @@ p {
     display: inline-block;
     width: 16%;
     height: 100%;
-    margin: .1%; }
+    margin: .1%;
+    overflow: hidden; }
+    .projectViewer li .projectCover, .projectViewer li .projectClick {
+      position: absolute;
+      background: rgba(27, 100, 152, 0.9);
+      color: #fff;
+      left: -100%;
+      height: 15%;
+      width: 100%;
+      transition: left 400ms ease-in;
+      padding-top: 10px; }
+    .projectViewer li .projectClick {
+      bottom: 0;
+      left: 100%; }
+    .projectViewer li:hover .projectCover, .projectViewer li:hover .projectClick {
+      left: 0; }
     .projectViewer li .projectItem {
       transition: all 400ms; }
       .projectViewer li .projectItem img {
@@ -330,6 +348,8 @@ p {
   color: #fff;
   background: #1b6498; }
   #me .postLeft p {
+    position: absolute;
+    right: 51%;
     text-align: right; }
 #me .postRight {
   width: 50%;

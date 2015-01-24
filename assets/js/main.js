@@ -19,7 +19,7 @@ $(document).ready(function(){
     var num = sID.split('-');
 
     $('.diagram').load('sources/skills.html #' + skill[num[1]-1]);
-    $('.switchItem').find('selected').removeClass('selected');
+    $('.switchItem.selected').removeClass('selected');
     $(this).addClass('selected');
   });
 
@@ -33,7 +33,11 @@ $(document).ready(function(){
     var val = link.attr('data-value');
     var data = val.split(':');
 
-    $(data[0]).velocity("scroll", 1000);
+    $(data[0]).velocity("scroll", { duration: 1000, offset: -100 });
+  });
+
+  $('.buttonStart').on('click', function(){
+    $("#projects").velocity("scroll", { duration: 1000, offset: -100 });
   });
 
 });

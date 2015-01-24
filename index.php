@@ -24,7 +24,7 @@
               lorenzkromer.<img src="./images/oe.png" alt="">
               <br>
               <br>
-              <button class="button">START</button>
+              <button class="buttonStart">START</button>
             </div>
           </div>
           <div class="bottom-body Xcenter zdepth">
@@ -47,37 +47,49 @@
       </div>
 
       <div class="pageContent">
-        <div class="post" id="projects">
+        <div class="post Xcenter" id="projects">
             <h3 class="Xcenter">PROJECTS</h3>
             <p class="Xcenter">hier ein kleiner überblick über ein paar projekte, bei denen ich mitgearbeitet habe. falls euch gefällt was ihr seht, lasst es mich wissen ;-)</p>
             <div class="projectViewer Xcenter">
               <ul>
                 <li>
+                  <div class="projectCover">Radiopreis</div>
+                  <div class="projectClick">klick mich!</div>
                   <div class="projectItem" id="pi-1">
                     <img src="./images/preis.jpg" alt="">
                   </div>
                 </li>
                 <li>
+                  <div class="projectCover">c-TV</div>
+                  <div class="projectClick">klick mich!</div>
                   <div class="projectItem" id="pi-2">
                     <img src="./images/ct.jpg" alt="">
                   </div>
                 </li>
                 <li>
+                  <div class="projectCover">Mapple Guestbook</div>
+                  <div class="projectClick">klick mich!</div>
                   <div class="projectItem" id="pi-3">
                     <img src="./images/mapple.jpg" alt="">
                   </div>
                 </li>
                 <li>
+                  <div class="projectCover">Python Projekte</div>
+                  <div class="projectClick">klick mich!</div>
                   <div class="projectItem" id="pi-4">
-                    <img src="./images/python.png" alt="">
+                    <img src="./images/python.jpg" alt="">
                   </div>
                 </li>
                 <li>
+                  <div class="projectCover">Raspberry Pi</div>
+                  <div class="projectClick">klick mich!</div>
                   <div class="projectItem" id="pi-5">
                     <img src="./images/rpi.jpg" alt="">
                   </div>
                 </li>
                 <li>
+                  <div class="projectCover">Portfolio</div>
+                  <div class="projectClick">klick mich!</div>
                   <div class="projectItem" id="pi-6">
                     <img src="./images/wiese.jpg" alt="">
                   </div>
@@ -85,7 +97,6 @@
               </ul>
               <div class="projectInfo Xcenter">
                 <div class="projectText"></div>
-                <span class="icon-cross closer"></span>
               </div>
             </div>
         </div>
@@ -93,8 +104,10 @@
             <h3>THAT'S ME</h3>
             <div class="posShift">
               <div class="postLeft">
-                <p>hi! mein name ist lorenz kromer. ich bin 21 jahre alt, lebe in wien und studiere in st. pölten.</p>
-                <p>derzeit versuche ich endlich ein </p>
+                <p>hi! mein name ist lorenz kromer. <br> ich bin 21 jahre alt, lebe in wien und studiere in st. pölten. <br><br>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta cum distinctio eum asperiores rem enim fugit <br> eaque voluptas est laboriosam in repudiandae architecto placeat, illum atque quasi explicabo, culpa, molestias!Lorem ipsum dolor
+                  <br><br> sit amet, consectetur adipisicing elit. Reprehenderit voluptas, aperiam quae provident, recusandae rem quis. Ut quaerat, quasi iste voluptate et dolorem atque sed neque voluptates, molestias dolor enim!
+                </p>
               </div>
               <div class="postRight">
                 <img src="./images/porttrait.jpg" alt="">
